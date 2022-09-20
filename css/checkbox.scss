@@ -1,0 +1,43 @@
+.MyCheck {
+    display: flex;
+    align-items: center;
+
+    & span/*modificar el span dentro del check*/
+        {
+        display: inline-block;
+        width: 48px;
+        height: 20px;
+        border-radius: 50px;
+        color: rgb(76 67 67 / 42%);
+        cursor: pointer;
+        box-shadow: 0px 0px 5px #7c7c7c;
+        background-color: #242424;}
+
+    & span::after/*se selecciona con el pseudo-elemento after al hijo span para modificarlo*/{
+        content: "";/*cuando se usa after o before se debe colocar content y como no deseamos que halla contenido se deja en blanco*/
+        background-color: rgb(255 167 58);
+        display: block;
+        width: 20px;
+        height: 20px;
+        transform: scale(0.9);
+        border-radius: 50px;
+        transition: .2s;
+        }
+
+    & input:checked~span::after/*la pseudo-clase checked se utiliza para cambiar el estado del checkbox, cuando esta activado se incluye codigo css y cuando se desactiva se cambia a la pocision original*/{
+        background-color: rgba(0, 0, 0, 0.425);/*cuando cambie el check se cambia el color del boton*/
+        transform: scale(0.9) translate(30px);/*y se mueve hacia la derecha el boton*/
+        }
+
+    & input {
+        visibility: hidden;/*no se muestra el check por defecto*/
+        width: 0px;
+        }
+        
+}
+
+
+
+
+
+

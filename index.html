@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="/css/style.scss">
+    <link rel="stylesheet" href="/css/checkbox.scss">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/checkbox.css">
+    <link rel="stylesheet" href="/css/nav_mode.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    
+    <nav class="nav__mode">
+        <ul class="mode__ul">
+            <li class="mode_li mode__dark"><img src="/imagenes/mariobros-dragon.gif" alt=""></li>
+            <li class="mode_li mode__elegant"><img src="/imagenes/marioElegante.gif" alt=""></li>
+            <li class="mode_li mode__office"><img src="/imagenes/ofice.gif" alt=""></li>
+            <li class="mode_li mode__night"><img src="/imagenes/noche.gif" alt=""></li>
+            <li class="mode_li mode__rosa"><img src="/imagenes/rosado,gif.gif" alt=""></li>
+        </ul>
+    </nav>
+
+
+    <div class="container"><!-- contenedor padre de todos -->
+    <!-- contador y el resultado -->
+        <div class="valorActual">
+            <h2 class="conatiner__title">Contador</h2>
+            <h3 class="conatiner__cantidad" >0</h3>
+        </div>
+    
+        <div class='configuraciones'>
+    
+    
+            <!-- Notificacion de alcanzado-->
+            <div class="notificacionAlcanzada">
+       
+                <span class='notificacionAlcanzada__title'>Notifiar al llegar a:</span>
+                
+                <input type="number" class="inputAlcanzada">
+            
+                <label class="MyCheck">
+                    <input type="checkbox" id="checboxNotificacion" class="checkAlcanzado">
+                    <span></span>
+                </label>
+       
+            </div>
+    
+    
+            <!-- boton para activar los sonidos -->
+            <div class="boton__sonido">
+                <h3 class="sonido__titulo">Sonido:</h3>
+                <label class="MyCheck">
+                    <input class="check" type="checkbox">
+                    <span></span>
+                </label>
+                <span class="modo__sonido">Activado</span>
+            </div>
+    
+    
+            <!-- incremento del contador -->
+            <div class="container__incrementarContador">
+                <span class="incremento__title">Incrementar contador:</span>
+                <input class="incrementarContador__input" type="number" value="1">
+            </div>
+    
+    
+            <!-- cambiar el resultado -->
+            <div class="container__cambiarResult">
+                <span class="cambia__title">Cambiar a:</span>
+                <input class="input__cambiarResult" type="number" value="0">
+                <button class="cambiarResult__btn">cambiar</button>
+            </div>
+    
+    
+            <!-- botones para aumentar y disminuir el resultado -->
+            <div class='container__btn'>
+                <button class="conatiner__btnDisminuir btn">Disminuir -</button>
+                <button class="conatiner__btnAumentar btn">Aumentar +</button>
+            </div>
+    
+    
+            <!-- boton para resetear todo -->
+            <button class="limpiar">limpiar</button>
+       
+       
+        </div>
+
+       
+    </div>
+    <script src="/js/app.js" type="module"></script>
+    <script src="/js/sonidos.js" type="module"></script>
+    <script src="/js/checkbox.js" type="module"></script>
+    <script src="/js/cambiarModo.js"></script>
+</body>
+
+</html>
