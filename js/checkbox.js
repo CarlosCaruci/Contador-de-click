@@ -25,4 +25,3 @@ check.addEventListener('click', ()=>{
 }
 
 checkedActivate()
-
